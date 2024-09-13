@@ -34,8 +34,6 @@ public class CheckController {
             followersMap.put(matcher1.group(1), matcher2.group(1));
         }
 
-        System.out.println(followersList.size());
-        System.out.println(followersMap.size());
 
         input = followingsCode;
         matcher1 = pattern1.matcher(input);
@@ -66,8 +64,7 @@ public class CheckController {
         model.addAttribute("iDontFollowBack",iDontFollowBack);
         model.addAttribute("followersMap",followersMap);
         model.addAttribute("followingMap",followingsMap);
-        System.out.println("팔로워수 : "+followersList.size());
-        System.out.println("팔로우수 : "+followingsList.size());
+        System.out.println("확인완료!");
         return "result";
     }
 
